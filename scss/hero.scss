@@ -1,0 +1,67 @@
+@import './mixin.scss';
+
+.hero {
+    background-image: url(../images/hero-bg.jfif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+
+    &__content{
+        position: absolute;
+        bottom: 10%;
+        transform: translateX(-50%);
+        left: 50%;
+        width: 90%;
+    }
+
+    &__sub-title {
+        font-family: 'Bai Jamjuree', serif;
+        text-transform: uppercase;
+        font-size: 34px;
+        @include media(480px){
+            font-size: 28px;
+        }
+    }
+
+    &__title {
+        font-size: 96px;
+        font-weight: 500;
+        line-height: 96px;
+        margin: 10px 0 20px 0;
+        @include media(768px){
+            font-size: 64px;
+        }
+        @include media(480px){
+            font-size: 48px;
+        }
+    }
+
+    &__button {
+        @include button(12px 24px, $white, $black, none);
+        border-radius: 50px;
+        display: inline-flex;
+        align-items: center;
+        font-family: 'Bai Jamjuree', serif;
+        text-transform: uppercase;
+        font-size: 20px;
+        &:hover,
+        &:focus{
+            background-color: $black;
+            color: $white;
+        }
+        &:hover .hero__arrow,
+        &:focus .hero__arrow{
+            fill: $white;
+            }
+        }
+
+        &__arrow{
+            transition: 250ms ease-in;
+            fill: $black;
+            margin-left: 10px;
+        }
+
+}

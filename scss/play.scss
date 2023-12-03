@@ -1,0 +1,39 @@
+.play {
+    position: relative;
+    padding: 200px 0;
+    &__image {
+        position: absolute;
+        z-index: -1;
+        width: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+
+    &__content{
+        max-width: 630px;
+        margin-left: auto;
+    }
+
+    &__title {
+        font-size: 93px;
+        text-transform: uppercase;
+        @include media(768px){
+            font-size: 64px;
+        }
+        @include media(480px){
+            font-size: 48px;
+        }
+    }
+
+    &__text {
+        line-height: 115%;
+        margin-top: 15px;
+        & span{
+            color: $green;
+        }
+        @include media(480px){
+            font-size: 24px;
+        }
+    }
+}
