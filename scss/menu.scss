@@ -14,6 +14,7 @@
         width: 100%;
         z-index: 998;
         left: -100%;
+        top: 0;
         transition: 300ms ease-in;
     }
 }
@@ -37,6 +38,7 @@ header{
         margin-top: 20%;
         width: 80%;
         height: auto;
+        fill: white;
     }
 
     &__list {
