@@ -3,6 +3,7 @@ const swiper = new Swiper('.products__slider', {
         spaceBetween:70,
         slideToClickedSlide:true,
         loop:true,
+        centeredSlides:true,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,

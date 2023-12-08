@@ -2,10 +2,14 @@
     position: relative;
     padding: 200px 0;
     background: $gradient;
+    @include media(1000px){
+        padding: 75px 0;
+    }
     &__image {
+        transform: translateY(-50%);
         position: absolute;
         left: 7%;
-        top: -5%;
+        top: 50%;
         height: auto;
         width: 550px;
         border-radius: 15px;
@@ -20,6 +24,7 @@
         z-index: 2;
         @include media(1285px){
             margin-left: unset;
+            text-align: center;
         }
     }
 

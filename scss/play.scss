@@ -1,6 +1,9 @@
 .play {
     position: relative;
     padding: 200px 0;
+    @include media(1000px){
+        padding: 75px 0;
+    }
     &__image {
         position: absolute;
         z-index: -1;
@@ -13,6 +16,10 @@
     &__content{
         max-width: 630px;
         margin-left: auto;
+        @include media(1000px){
+            margin-left: unset;
+            text-align: center;
+        }
     }
 
     &__title {

@@ -140,11 +140,11 @@
             display: flex;
             cursor: pointer;
             position: relative;
-            margin: auto;
             width: 100%;
             -webkit-tap-highlight-color: transparent;
             transform: translate3d(0, 0, 0);
             align-items: center;
+            margin-left: 12px;
             & svg{
                 position: relative;
                 z-index: 1;
@@ -182,7 +182,7 @@
 		}
 
 		&__submit {
-            @include button(10px 52px 10px 52px,$purple ,white,0);
+            @include button(10px 52px 10px 52px,$white ,$black,0);
             text-align: center;
             font-size: 16px;
             font-weight: 500;
@@ -191,11 +191,13 @@
             margin-top: 30px;
             border: 1px solid transparent;
             cursor: pointer;
+            border-radius: 8px;
             &:hover,
             &:focus{
-                background-color: transparent;
-                border: 1px solid $purple;
+                background-color: $black;
+                border: 1px solid $black;
                 transition: 300ms ease-in;
+                color: $white;
             }
 		}
 
