@@ -20,8 +20,15 @@ header {
 }
 
 .menu {
-	padding: 50px;
+	padding: 70px;
 	z-index: 5;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 .menu_active {
 	position: fixed;
@@ -35,7 +42,7 @@ header {
 	transition: 300ms ease-in;
 }
 .menu__logo {
-	margin-top: 20%;
+	margin-top: auto;
 	width: 80%;
 	height: auto;
 	fill: white;
@@ -89,6 +96,9 @@ header {
 .burger::after {
 	bottom: 0;
 }
+.burger:before {
+	top: 0;
+}
 .burger::after, .burger::before {
 	-webkit-transform: rotate(180deg);
 	        transform: rotate(180deg);
@@ -97,7 +107,7 @@ header {
 }
 .burger span {
 	position: absolute;
-	background-color: #7DFB5D;
+	background-color: transparent;
 	left: 0;
 	top: 14px;
 	width: 100%;
@@ -110,21 +120,17 @@ header {
 	z-index: 9999;
 }
 .burger_opened::before {
-	bottom: 13.5px;
+	top: 50%;
 	-webkit-transform: rotate(-45deg);
 	        transform: rotate(-45deg);
 	-webkit-transition-duration: 300ms !important;
 	        transition-duration: 300ms !important;
 }
 .burger_opened::after {
-	top: 13.5px;
+	top: 50%;
 	-webkit-transform: rotate(45deg);
 	        transform: rotate(45deg);
 	-webkit-transition-duration: 300ms !important;
 	        transition-duration: 300ms !important;
-}
-.burger_opened span {
-	-webkit-transform: scale(0);
-	        transform: scale(0);
 }
 /*# sourceMappingURL=menu.css.map */

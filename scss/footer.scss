@@ -53,6 +53,9 @@ footer{
             width: 50%;
             text-align: center;
         }
+        @include media(390px){
+            width: 100%;
+        }
     }
 
     &__lists {
@@ -74,10 +77,6 @@ footer{
         margin-bottom: 10px;
         text-transform: uppercase;
         transition: 250ms ease-in;
-        &:hover,
-        &:focus{
-            color: $green;
-        }    
     }
 
     &__item {

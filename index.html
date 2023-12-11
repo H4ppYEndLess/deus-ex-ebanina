@@ -38,9 +38,9 @@
         <a class="cart">
             Cart <sup>(0)</sup>
         </a>
-        <div class="burger burger_close" open-menu>
+        <button type="button" class="burger burger_close" open-menu>
             <span></span>
-        </div>
+        </button>
     </header>    
     <main>
        
@@ -246,8 +246,7 @@
             </div>
             <div class="footer__lists">
                 <ul class="footer__list">
-                    <li class="footer__title"><a href="#">shop</a></li>
-                    <li class="footer__item"><a href="#">NuraTrue Pro</a></li>
+                    <li class="footer__title"><h3>NuraTrue Pro</h3></li>
                     <li class="footer__item"><a href="#">Audio Transmitter</a></li>
                     <li class="footer__item"><a href="#">NuraTrue</a></li>
                     <li class="footer__item"><a href="#">NuraBuds</a></li>
@@ -257,7 +256,7 @@
                     <li class="footer__item"><a href="#">Subscription</a></li>
                 </ul>
                 <ul class="footer__list">
-                    <li class="footer__title">Info</li>
+                    <li class="footer__title"><h3>Info</h3></li>
                     <li class="footer__item"><a href="#">Why Nura?</a></li>
                     <li class="footer__item"><a href="#">Shipping</a></li>
                     <li class="footer__item"><a href="#">Returns</a></li>
@@ -265,12 +264,12 @@
                     <li class="footer__item"><a href="#">Patents</a></li>
                 </ul>
                 <ul class="footer__list">
-                    <li class="footer__title"><a href="#">SUpport</a></li>
+                    <li class="footer__title"><h3>SUpport</h3></li>
                     <li class="footer__item"><a href="#">Help Centre</a></li>
                     <li class="footer__item"><a href="#">Contact Us</a></li>
                 </ul>
                 <ul class="footer__list">
-                    <li class="footer__title"><a href="#">Socials</a></li>
+                    <li class="footer__title"><h3>Socials</h3></li>
                     <li class="footer__item"><a href="#">Instagram</a></li>
                     <li class="footer__item"><a href="#">Facebook</a></li>
                     <li class="footer__item"><a href="#">YouTube</a></li>
@@ -293,7 +292,7 @@
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
           <h2 class="modal__title">Leave your data here, we will contact you</h2>
-          <form>
+          <form action="./php/mailer.php">
           <ul>
             <li>
               <label for="name" class="modal__label">Name</label>
@@ -337,7 +336,7 @@
               </label>
             </li>
             <li class="modal__li_button">
-              <button type="button" class="modal__submit">Send</button>
+              <button type="submit" class="modal__submit">Send</button>
             </li>
           </ul>
           <button type="button" class="modal__exit-button" data-modal-close>
