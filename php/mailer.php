@@ -2,7 +2,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-$mail = новий PHPMailer(true);
+$mail = PHPMailer(true);
 $name = $_POST['name']
 $email = $_POST['email']
 
@@ -58,9 +58,8 @@ $mail->Body = '
 І бере нас розлука в полон,<br>
 А вночі ти приходиш, мій сон.';
 $mail->AltBody = 'Це є тіло в короткий текст для не HTML-mail клієнтів';
-$mail->msgHTML(file_get_contents('contents.html'), __DIR__);
 
-$ mail-> send ();{
+$mail-> send ();{
     echo 'Message has been sent';
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
