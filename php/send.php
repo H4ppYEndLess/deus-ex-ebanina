@@ -1,6 +1,6 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer;
+use PHPMailer\Exception;
 
 require './PHPMailer-master/src/Exception.php';
 require './PHPMailer-master/src/PHPMailer.php';
@@ -58,7 +58,7 @@ $mail->Body = 'Біля озера у літню ніч<br>
 А вночі ти приходиш, мій сон.';
 $mail->AltBody = 'Це є тіло в короткий текст для не HTML-mail клієнтів';
 
-$mail->send ();{
-} catch (Exception $e) {
+try {
+    $mail->send();
+    echo 'Message has been sent';
 }
-?>
