@@ -18,11 +18,11 @@ $mail->Host = 'smtp-pulse.com';                     //Set the SMTP-server to sen
 $mail->SMTPAuth = true;                                   //Enable SMTP authentication
 $mail->Username = 'dante391.roman@gmail.com';                     //SMTP username
 $mail->Password = 'nrDNmtQpDnF7s7F';                               //SMTP password
-$mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
-$mail->Port = 465;                                    // TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+$mail->SMTPSecure = 'TLS';            //Enable implicit TLS encryption
+$mail->Port = 587;                                    // TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
 //Recipients
-$mail->setFrom('davydyuk.r1308@lntu.edu.ua', 'Roman');
+$mail->setFrom('davydyuk.r1308@lntu.edu.ua', 'HappY');
 $mail->addAddress($email, $name);     //Add a recipient
 
 //Content
@@ -64,3 +64,4 @@ $mail-> send ();{
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+?>
