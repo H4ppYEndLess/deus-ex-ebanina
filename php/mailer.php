@@ -1,15 +1,16 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
-$mail = PHPMailer(true);
-$name = $_POST['name']
-$email = $_POST['email']
+use PHPMailer\PHPMailer\SMTP;
 
 require './PHPMailer-master/src/Exception.php';
 require './PHPMailer-master/src/PHPMailer.php';
 require './PHPMailer-master/src/SMTP.php';
-require './PHPMailer-master/src/PHPMailer'
+
+$mail = new PHPMailer(true);
+
+    $name = $_POST['name'];
+    $email = $_POST['email'];
 
 //Server settings
 $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
@@ -59,9 +60,8 @@ $mail->Body = '
 А вночі ти приходиш, мій сон.';
 $mail->AltBody = 'Це є тіло в короткий текст для не HTML-mail клієнтів';
 
-$mail-> send ();{
+$mail->send ();{
     echo 'Message has been sent';
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    echo "Message could not be sent. Mailer Error";
 }
-?>
