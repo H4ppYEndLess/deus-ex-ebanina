@@ -8,6 +8,18 @@ const swiper = new Swiper('.products__slider', {
             el: '.swiper-pagination',
             clickable: true,
           },
+          breakpoints: {
+            // when window width is >= 320px
+            1024:{
+              spaceBetween:70,
+            },
+            650:{
+              spaceBetween:35,
+            },
+            0:{
+              spaceBetween:15,
+            },
+          }
   });
 const featured = new Swiper('.featured__slider', {
   slidesPerView: 'auto',

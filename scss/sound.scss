@@ -4,9 +4,12 @@
     background-position: center;
     background-size: cover;
     text-align: center;    
+    @include media(900px){
+        padding: 180px 20px;
+    }
     @include media(480px){
         font-size: 24px;
-        padding: 240px 20px;
+        padding: 120px 20px;
     }
     &__title {
         font-size: 72px;

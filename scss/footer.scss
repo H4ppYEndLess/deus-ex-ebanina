@@ -11,6 +11,9 @@ footer{
         padding-bottom: 60px;
         flex-wrap: wrap;
         gap: 50px;
+        @include media(1100px){
+            flex-direction: column;
+        }
         @include media(768px){
             flex-wrap: wrap;
         }
@@ -18,7 +21,7 @@ footer{
 
     &__description {
         max-width: 310px;
-        @include media(768px){
+        @include media(1100px){
             max-width: none;
             display: flex;
             align-items: center;
@@ -37,6 +40,9 @@ footer{
         &:focus{
             fill: $green;
         }
+        @include media(550px){
+            margin-right: auto;
+        }
     }
 
     &__text {
@@ -49,12 +55,14 @@ footer{
     }
 
     &__list{
-        @include media(1000px){
-            width: 50%;
-            text-align: center;
-        }
-        @include media(390px){
-            width: 100%;
+
+        &-container{
+            @include media(700px){
+                width: calc(50% - 20px);
+            }
+            @include media(420px){
+                width: 100%;
+            }
         }
     }
 
@@ -66,7 +74,7 @@ footer{
         gap: 20px;
         @include media(1000px){
             gap: 0;
-            row-gap: 20px;
+            gap: 20px;
         }
     }
 

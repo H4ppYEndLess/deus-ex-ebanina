@@ -3,7 +3,7 @@ a {
 	cursor: pointer;
 }
 
-p, h1, h2, ul {
+p, h1, h2, ul, h1, h2, h3 {
 	margin: 0;
 }
 
@@ -540,6 +540,9 @@ header {
 .products {
 	padding: 100px 0;
 }
+.products__slider {
+	padding-bottom: 50px !important;
+}
 .products__slide {
 	max-width: 313px;
 	background-color: #E5E5E5;
@@ -595,11 +598,11 @@ header {
 	bottom: 0 !important;
 }
 .swiper-pagination-bullet {
-	opacity: 0.7 !important;
+	opacity: 1 !important;
 	background-color: #3333F5 !important;
 }
 .swiper-pagination-bullet-active {
-	background-color: #000000 !important;
+	background-color: #fff !important;
 	opacity: 1 !important;
 }
 
@@ -760,10 +763,15 @@ header {
 	background-size: cover;
 	text-align: center;
 }
+@media (max-width: 900px) {
+	.sound {
+		padding: 180px 20px;
+	}
+}
 @media (max-width: 480px) {
 	.sound {
 		font-size: 24px;
-		padding: 240px 20px;
+		padding: 120px 20px;
 	}
 }
 .sound__title {
@@ -853,6 +861,14 @@ footer {
 	    flex-wrap: wrap;
 	gap: 50px;
 }
+@media (max-width: 1100px) {
+	.footer__main {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+}
 @media (max-width: 768px) {
 	.footer__main {
 		-ms-flex-wrap: wrap;
@@ -862,7 +878,7 @@ footer {
 .footer__description {
 	max-width: 310px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
 	.footer__description {
 		max-width: none;
 		display: -webkit-box;
@@ -891,6 +907,11 @@ footer {
 .footer__logo:hover, .footer__logo:focus {
 	fill: #7DFB5D;
 }
+@media (max-width: 550px) {
+	.footer__logo {
+		margin-right: auto;
+	}
+}
 .footer__text {
 	font-size: 24px;
 	line-height: 130%;
@@ -901,14 +922,13 @@ footer {
 		text-align: center;
 	}
 }
-@media (max-width: 1000px) {
-	.footer__list {
-		width: 50%;
-		text-align: center;
+@media (max-width: 700px) {
+	.footer__list-container {
+		width: calc(50% - 20px);
 	}
 }
-@media (max-width: 390px) {
-	.footer__list {
+@media (max-width: 420px) {
+	.footer__list-container {
 		width: 100%;
 	}
 }
@@ -929,7 +949,7 @@ footer {
 @media (max-width: 1000px) {
 	.footer__lists {
 		gap: 0;
-		row-gap: 20px;
+		gap: 20px;
 	}
 }
 .footer__title {
