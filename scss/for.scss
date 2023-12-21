@@ -1,0 +1,77 @@
+.for {
+    position: relative;
+    padding: 200px 0;
+    background: $gradient;
+    @include media(1000px){
+        padding: 75px 0;
+    }
+    &__image {
+        transform: translateY(-50%);
+        position: absolute;
+        left: 7%;
+        top: 50%;
+        height: auto;
+        width: 550px;
+        border-radius: 15px;
+        @include media(1285px){
+            display: none;
+        }
+    }
+
+    &__content {
+        max-width: 630px;
+        margin-left: auto;
+        z-index: 2;
+        @include media(1285px){
+            margin-left: unset;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        font-size: 94px;
+        margin-bottom: 20px;
+        @include media(768px){
+            font-size: 64px;
+        }
+        @include media(480px){
+            font-size: 48px;
+        }
+    }
+
+    &__text {
+        line-height: 115%;
+        margin-bottom: 20px;
+        @include media(480px){
+            font-size: 24px;
+        }
+        & span{
+            color: $green;
+        }
+    }
+
+    &__button {
+        @include button(12px 24px, transparent, $white, 1px solid $white);
+        border-radius: 50px;
+        display: inline-flex;
+        align-items: center;
+        font-family: 'Bai Jamjuree', serif;
+        text-transform: uppercase;
+        font-size: 20px;
+        &:hover,
+        &:focus{
+            background-color: $white;
+            color: $black;
+        }
+        &:hover .for__arrow,
+        &:focus .for__arrow{
+            fill: $black;
+            }
+        }
+
+    &__arrow{
+        transition: 250ms ease-in;
+        fill: $white;
+        margin-left: 10px;
+    }
+}

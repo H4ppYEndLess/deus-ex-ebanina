@@ -1,0 +1,59 @@
+.sound {
+    padding: 240px 60px;
+    background-image: url(../images/sound.jfif);
+    background-position: center;
+    background-size: cover;
+    text-align: center;    
+    @include media(900px){
+        padding: 180px 20px;
+    }
+    @include media(480px){
+        font-size: 24px;
+        padding: 120px 20px;
+    }
+    &__title {
+        font-size: 72px;
+        @include media(768px){
+            font-size: 64px;
+        }
+        @include media(480px){
+            font-size: 48px;
+        }
+    }
+
+    &__text {
+        max-width: 800px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 40px
+    }
+
+    &__button {
+        @include button(12px 35px, $purple, $white, none);
+        border-radius: 50px;
+        display: inline-flex;
+        align-items: center;
+        font-family: 'Bai Jamjuree', serif;
+        text-transform: uppercase;
+        &:hover,
+        &:focus{
+            background-color: $black;
+            color: $white;
+        }
+        &:hover .sound__arrow,
+        &:focus .sound__arrow{
+            fill: $white;
+            }
+        }
+
+    &__arrow{
+        transition: 250ms ease-in;
+        fill: $white;
+        margin-left: 10px;
+    }
+
+    &__content{
+        text-align: center;
+    }
+}
+
